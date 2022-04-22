@@ -1,0 +1,77 @@
+.hero {
+  &__content {
+    max-width: 40rem;
+    h1 {
+      font-size: clamp(3rem, 6vw, 8rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 3rem;
+    }
+  }
+  &__img {
+    img {
+      width: 55rem;
+      height: 55rem;
+    }
+  }
+}
+
+.services {
+  &__wrapper {
+    @include grid(3, 4rem);
+  }
+
+  &__item {
+    p {
+      min-height: 13rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.about {
+  &__img {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 47.7rem;
+      width: 47.7rem;
+      top: 0;
+      left: 0;
+      background-color: $clr-accent;
+      z-index: 999;
+      border-radius: 50%;
+      mix-blend-mode: overlay;
+    }
+  }
+  &__content {
+    max-width: 48rem;
+  }
+}
+
+.trends {
+  &__wrapper {
+    @include grid(3, 4rem);
+  }
+
+  &__card {
+    img {
+      background-color: $clr-light;
+      @include imgFit(100%, auto);
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+    &__content {
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
+  }
+}
+
+.calltoaction {
+  h3 {
+    font-weight: 900;
+    font-size: 3rem;
+  }
+}
