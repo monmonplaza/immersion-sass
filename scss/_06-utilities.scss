@@ -89,3 +89,20 @@ $alignments: (
     }
   }
 }
+
+$breakpoints: (
+  "sm": 640px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+);
+
+@each $key, $val in $breakpoints {
+  @media screen and (max-width: $val) {
+    @for $i from 1 through 3 {
+      .#{$key}-grid-#{$i} {
+        @include grid($i);
+      }
+    }
+  }
+}
