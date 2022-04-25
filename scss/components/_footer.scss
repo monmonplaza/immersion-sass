@@ -1,6 +1,23 @@
 .footer {
+  &__wrapper {
+    @include mediaQuery {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__icons {
+    @include mediaQuery {
+      align-items: center;
+      flex-direction: column;
+      margin-right: 0;
+    }
+  }
   ul {
     margin-right: 3rem;
+    @include mediaQuery {
+      margin-right: 0rem;
+    }
     li {
       margin-right: 1rem;
     }
